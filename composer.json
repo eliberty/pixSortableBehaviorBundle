@@ -30,7 +30,6 @@
             "Pix\\SortableBehaviorBundle\\": "src/"
         }
     },
-    "target-dir": "Pix/SortableBehaviorBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "0.3-dev"
