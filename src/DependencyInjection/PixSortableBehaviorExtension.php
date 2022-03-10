@@ -21,12 +21,12 @@ use Symfony\Component\DependencyInjection\Alias;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class PixSortableBehaviorExtension extends Extension
+final class PixSortableBehaviorExtension extends Extension
 {
     /**
      * {@inheritDoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);

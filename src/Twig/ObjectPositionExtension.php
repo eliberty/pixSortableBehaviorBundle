@@ -3,13 +3,15 @@
 namespace Pix\SortableBehaviorBundle\Twig;
 
 use Pix\SortableBehaviorBundle\Services\PositionHandler;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * Description of ObjectPositionExtension
  *
  * @author Volker von Hoesslin <volker.von.hoesslin@empora.com>
  */
-class ObjectPositionExtension extends \Twig_Extension
+class ObjectPositionExtension extends AbstractExtension
 {
     const NAME = 'sortableObjectPosition';
 
@@ -31,33 +33,29 @@ class ObjectPositionExtension extends \Twig_Extension
      *
      * @return string The extension name
      */
-    public function getName()
+    public function getName(): string
     {
         return self::NAME;
     }
 
     /**
-     * @return array
+     * @return TwigFunction[]
      */
-    public function getFunctions()
+    public function getFunctions(): array
     {
-        return array(
-            new \Twig_SimpleFunction('currentObjectPosition', array($this, 'currentPosition')),
-            new \Twig_SimpleFunction('lastPosition', array($this, 'lastPosition'))
-        );
+        return [
+            new TwigFunction('currentObjectPosition', [$this, 'currentPosition']),
+            new TwigFunction('lastPosition', [$this, 'lastPosition']),
+        ];
     }
 
-    /**
-     * @return int
-     */
-    public function currentPosition($entity) {
+    public function currentPosition($entity): int
+    {
         return $this->positionHandler->getCurrentPosition($entity);
     }
 
-    /**
-     * @return int
-     */
-    public function lastPosition($entity) {
+    public function lastPosition($entity): int
+    {
         return $this->positionHandler->getLastPosition($entity);
     }
 }

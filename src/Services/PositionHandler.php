@@ -51,7 +51,7 @@ abstract class PositionHandler
      * @param object $entity
      * @return int
      */
-    abstract public function getLastPosition($entity);
+    abstract public function getLastPosition($entity): int;
 
     /**
      * @param array $positionField
