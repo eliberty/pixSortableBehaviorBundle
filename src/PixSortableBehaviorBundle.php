@@ -12,6 +12,6 @@ namespace Pix\SortableBehaviorBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class PixSortableBehaviorBundle extends Bundle
+class PixSortableBehaviorBundle extends Bundle
 {
 }

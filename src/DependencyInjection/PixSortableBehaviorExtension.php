@@ -21,7 +21,7 @@ use Symfony\Component\DependencyInjection\Alias;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-final class PixSortableBehaviorExtension extends Extension
+class PixSortableBehaviorExtension extends Extension
 {
     /**
      * {@inheritDoc}
