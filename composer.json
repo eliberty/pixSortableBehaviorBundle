@@ -18,7 +18,7 @@
     },
     "require-dev": {
         "gedmo/doctrine-extensions": ">=3.5",
-        "sonata-project/admin-bundle": "^3.0"
+        "sonata-project/admin-bundle": "^3.0|^4.0"
     },
     "suggest": {
         "sonata-project/admin-bundle": "Can be easily integrated with Sonata Admin bundle",
